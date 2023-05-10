@@ -1,0 +1,69 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #ffff;
+}
+.collapse {
+    background-color: #383fa8;
+}
+.nav-link:hover {
+    background-color: #4e61e2;
+    transition: 0.2s;
+}
+.nav-link {
+    color: white;
+}
+.navbar-nav {
+    padding-left: 0%;
+    background-color: #383fa8;
+    background-size: cover;
+    width: 250%;
+    color: white;
+}
+.nav-item {
+    margin: 5%;
+    color: white;
+}
+#navbarLogo {
+    width: 13%;
+    height: 20%;
+}
+#bannerBox {
+    background-color: #115e58;
+    background-image: url(banner.png) none;
+    background-size: cover;
+    text-align: center;
+}
+h1, h3, h5 {
+    text-align: center;
+}
+#cards {
+    align-items: center;
+    text-align: center;
+}
+#cardsRow {
+    margin-left: 6%;
+} 
+
+.card {
+    border: 2px solid black;
+  outline: #115258 solid 6px;
+    box-shadow: 12px 5px 15px black;
+}
+hr {
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.btn-custom {
+    background-color: #63B5A6;
+    color: white;
+}
+.d-flex {
+    width: 150%;
+}
+#cart {
+    width: 55%;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="main.css" rel="stylesheet" />
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <nav class="navbar bg-body-tertiary">
+                <div id="navLogo" class="container-fluid">
+                  <a class="navbar-brand" href="index.html">
+                    <img id="navbarLogo" src="ZenSational_logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-right">
+                    ZenSational Shoes
+                  </a>
+                </div>
+              </nav>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">New Arrivals</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Women</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"  href="#"">Men</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"">Sale</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            </form>
+             <a href="cart.html"><img id="cart" src="cart.png" /></a>
+          </div>
+        </div>
+      </nav>
+</header>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+        <script src="payment.js" async></script>
+    
+    <div id="bannerBox">
+        <img id="banner" src="banner.png" >
+    </div>
+    <br>
+    <h1>LETS TIE UP SOME LOOSE ENDS</h1>
+    <hr>
+    <br>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3>SHOES</h3>
+            </div>
+
+            <div class="col">
+                <table id="orderTable">
+                       <td>
+                          <select name="model" id="model" onchange="finalPrice()">
+                             <option value="95">OPEN TOED HIGH TOPS ($95.00)</option>
+                             <option value="150" selected>HIGH STYLE HIGH-TOPS ($150.00)</option>
+                             <option value="110">LOW-TOP RUNNERS ($110.00)</option>
+                          </select>   
+                       </td>
+                       </table>
+            </div>
+    </div>
+</div>
+<br>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h3>PICK YOUR SIZE</h3>
+        </div>
+        <div class="col">
+            <table id="orderTable">
+                <td>
+                   <select name="shoeSize" id="shoeSize">
+                      <option value="0.00">7</option>
+                      <option value="0.00">8</option>
+                      <option value="0.00">9</option>
+                      <option value="0.00">10</option>
+                      <option value="0.00">11</option>
+                      <option value="0.00">12</option>
+                      <option value="0.00">13</option>
+                      <option value="0.00">14</option>
+                      <option value="0.00">15</option>
+                      <option value="0.00">16</option>
+                   </select>   
+                   <input type="hidden" id="shoeSizeName" name="shoeSizeName" />
+                </td>
+                </table>
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h3>INSURANCE</h3>
+        </div>
+        <div class="col">
+            <table id="orderTable">
+                <td>
+                   <select name="insurance" id="insurance"  onchange="finalPrice()">
+                      <option value="0">0</option>
+                      <option value="20">1</option>
+                      <option value="40">2</option>
+                      <option value="60">3</option>
+                   </select>   
+                   <input type="hidden" id="insuranceName" name="insuranceName" />
+                </td>
+                </table>
+        </div>
+    </div>
+</div>
+<br>
+<hr>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>SHIPPING</h1>
+    </div>
+</div>
+</div>
+<hr>
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <fieldset>
+            <h5>STANDARD</h5>
+        </div>
+        
+        <div class="col">
+            <label><input type="radio" id="shipping" name="shipping"  onchange="finalPrice()" value="0" checked/>   NO CHARGE</label>
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h5>2-DAY SHIPPING</h5>
+        </div>
+        
+        <div class="col">
+            <label><input type="radio" id="shipping" name="shipping" onchange="finalPrice()"  value="25.00" />  $25</label>
+        </div> 
+    </div>
+</div>
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h5>NEXT DAY DELIVERY</h5>
+        </div>
+        
+        <div class="col">
+            <label><input type="radio" id="shipping" name="shipping" onchange="finalPrice()" value="60.00"/>  $60</label>
+        </fieldset>
+        </div>
+    </div>
+</div>
+<br>
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h3>TOTAL</h3>
+        </div>
+        <div class="col">
+            <table>
+            <tr>
+                <td colspan="2" class="rightA"></td>
+                <td>
+                   <h3 id="select">total</h3>
+                </td>
+             </tr>
+          </table>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="col">
+
+        </div>
+        <div class="col">
+
+        </div>
+        <div class="col">
+            <button type="button" class="btn btn-custom btn-lg"> FINSIH CHECKOUT</button>
+        </div>
+    </div>
+</div>
+<br>
+
+</body>
+</html>
